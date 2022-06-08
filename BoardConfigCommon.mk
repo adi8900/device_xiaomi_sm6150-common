@@ -33,7 +33,7 @@ TARGET_BOOTLOADER_BOARD_NAME := sm6150
 TARGET_NO_BOOTLOADER := true
 
 # Disable safetynet hacks
-TARGET_OPT_OUT_SAFETYNET_SPOOF := true
+#TARGET_OPT_OUT_SAFETYNET_SPOOF := true
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
