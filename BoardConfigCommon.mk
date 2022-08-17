@@ -232,3 +232,5 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
 include vendor/xiaomi/sm6150-common/BoardConfigVendor.mk
+
+TARGET_KERNEL_CLANG_VERSION := r416183b1
