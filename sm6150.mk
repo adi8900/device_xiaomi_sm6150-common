@@ -125,6 +125,9 @@ PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libmegface
 
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-core/libpiex.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpiex-v32.so
+
 # Config Store
 PRODUCT_PACKAGES += \
     disable_configstore
