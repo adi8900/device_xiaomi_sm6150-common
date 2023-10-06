@@ -292,8 +292,6 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.default \
-    fstab.emmc \
     init.insmod.sh \
     init.mi.usb.sh \
     init.qti.early_init.sh \
