@@ -3,7 +3,7 @@
 # Current blobs with ELF checks disabled:
 # imsdatadaemon, libcne, libwqe, lowi-server depend on libwpa_client, which is a gnu makefile target
 
-# ADSP
+# ADSP - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/adsprpcd
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc
@@ -12,24 +12,28 @@ vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
 vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
-vendor/lib/libcdsprpc_system.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
-vendor/lib64/libcdsprpc_system.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
-# Alarm
+# ADSP (cam deps)
+vendor/lib/libcdsprpc_system.so
+vendor/lib64/libcdsprpc_system.so
+
+# Alarm (system)
 product/app/PowerOffAlarm/PowerOffAlarm.apk
+
+# Alarm (vendor) - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# ANT+
+# ANT+ - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio FX modules
@@ -53,16 +57,16 @@ vendor/lib64/libsoc_helper.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
-# Charger
+# Charger - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/hvdcp_opti
 
-# Certificate Authority
+# Certificate Authority - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/app/CACertService/CACertService.apk
 vendor/lib64/libcacertclient.so
 vendor/lib64/libjnihelper.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 
-# CNE
+# CNE - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnd
@@ -93,7 +97,7 @@ vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.latency@2.1.so
 
-# CNE profiles
+# CNE profiles - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
@@ -122,12 +126,12 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 
-# Configstore
+# Configstore - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
-# Display
+# Display - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libqseed3.so
@@ -137,11 +141,9 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
+vendor/lib64/libsdedrm.so
 
-# Display - from NX627J 20201029.204053
-vendor/lib64/libsdedrm.so|582910d21139781ad9e414c35207584f51e035e2
-
-# DPM
+# DPM (system)
 system/framework/tcmclient.jar
 system_ext/bin/dpmd
 system_ext/etc/dpm/dpm.conf
@@ -156,12 +158,14 @@ system_ext/lib64/libdpmfdmgr.so
 system_ext/lib64/libdpmframework.so
 system_ext/lib64/libdpmtcm.so
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
+
+# DPM (vendor) - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libdpmqmihal.so
 
-# DRM
+# DRM - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/qseecomd
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/qseecomd.rc
@@ -187,17 +191,19 @@ vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
-# DSP
+# DSP - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# FM
+# FM (system)
 system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
 system_ext/lib64/vendor.qti.hardware.fm@1.0.so
+
+# FM (vendor) - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor
 
@@ -233,7 +239,7 @@ vendor/lib64/libgsl.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 
-# Gatekeeper
+# Gatekeeper - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
@@ -334,12 +340,13 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 # IPA
 vendor/etc/init/ipa_fws.rc
 
-# IRQ balance
+# IRQ balance - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/msm_irqbalance
 
-# Keymaster
+# Keymaster - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
+vendor/etc/vintf/manifest/android.hardware.keymaster@4.1-service-default-qti.xml
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqcbor.so
@@ -350,7 +357,7 @@ vendor/lib/libadpcmdec.so
 vendor/lib/librice.so
 vendor/lib/libsmwrapper.so
 
-# Media
+# Media - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
@@ -373,7 +380,7 @@ vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 
-# Peripheral Manager
+# Peripheral Manager - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
@@ -503,7 +510,7 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
-# Time
+# Time - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
 vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
